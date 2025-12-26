@@ -1,0 +1,7 @@
+{
+  "name": "İslami Yaşam ve Namaz Vakti",
+  "description": "Namaz vakitleri, Kıble pusulası ve Zikirmatik özelliklerini içeren modern, karanlık mod tasarımlı bir İslami yaşam asistanı prototipi.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}

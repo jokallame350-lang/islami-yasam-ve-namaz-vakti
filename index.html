@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="referrer" content="no-referrer">
+    <title>EZAN VAKTİ 2026</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        body, html {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            -webkit-tap-highlight-color: transparent;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            background-color: #000; /* Varsayılan siyah */
+        }
+
+        ::-webkit-scrollbar { display: none !important; }
+
+        #root {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+        /* Masaüstü için ortalama */
+        @media (min-width: 640px) {
+            body {
+                display: flex;
+                justify-content: center;
+                background-color: #000;
+            }
+            #root {
+                max-width: 450px;
+                box-shadow: 0 0 50px rgba(0,0,0,0.5);
+                border-left: 1px solid #222;
+                border-right: 1px solid #222;
+            }
+        }
+        
+        /* Sayfa Geçiş Animasyonu */
+        .page-fade-in { animation: fadeIn 0.4s ease-out; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script type="module" src="/src/index.tsx"></script>
+</body>
+</html>
