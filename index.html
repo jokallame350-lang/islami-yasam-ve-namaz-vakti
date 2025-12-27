@@ -2,7 +2,7 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <meta name="referrer" content="no-referrer">
     <title>EZAN VAKTİ 2026</title>
     
@@ -21,7 +21,8 @@
             -webkit-tap-highlight-color: transparent;
             scrollbar-width: none;
             -ms-overflow-style: none;
-            background-color: #000; /* Varsayılan siyah */
+            /* Uygulama yüklenirken siyah ekran hissi vermemesi için arka planı transparan veya nötr yapın */
+            background-color: transparent; 
         }
 
         ::-webkit-scrollbar { display: none !important; }
@@ -37,7 +38,6 @@
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
-        /* Masaüstü için ortalama */
         @media (min-width: 640px) {
             body {
                 display: flex;
@@ -52,7 +52,6 @@
             }
         }
         
-        /* Sayfa Geçiş Animasyonu */
         .page-fade-in { animation: fadeIn 0.4s ease-out; }
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
@@ -63,6 +62,6 @@
 <body>
     <div id="root"></div>
     
-    <script type="module" src="/src/index.tsx"></script>
+    <script type="module" src="src/index.tsx"></script>
 </body>
 </html>
